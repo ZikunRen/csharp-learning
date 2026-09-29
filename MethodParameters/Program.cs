@@ -51,6 +51,16 @@
             return true;
         }
 
+        static int Sum(params int[] numbers)
+        {
+            int sum = 0;
+            foreach(int num in numbers)
+            {
+                sum += num;
+            }
+            return sum;
+        }
+
         static void Main()
         {
             int x = 5;
@@ -64,6 +74,11 @@
 
             MyTryParse("-1255", out int number);
             Console.WriteLine(number);
+
+            Console.WriteLine(Sum(1, 2, 3));        // 6
+            Console.WriteLine(Sum());               // 0
+            Console.WriteLine(Sum(new[] { 4, 5 })); // 9
+            Console.WriteLine(Sum(4, 5));
         }
     }
 }
