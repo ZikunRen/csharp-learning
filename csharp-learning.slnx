@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="MethodParameters/MethodParameters.csproj" Id="bbc6c548-3cc3-4b05-b601-d08e4b5a301c" />
   <Project Path="NumberGuessingGame/NumberGuessingGame.csproj" />
 </Solution>
