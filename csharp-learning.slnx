@@ -1,5 +1,6 @@
 <Solution>
+  <Project Path="019-Player/019-Player.csproj" />
+  <Project Path="020-Inheritance/020-Inheritance.csproj" Id="bbd02165-86cd-4c88-a614-8e7c24f269c5" />
   <Project Path="MethodParameters/MethodParameters.csproj" Id="bbc6c548-3cc3-4b05-b601-d08e4b5a301c" />
   <Project Path="NumberGuessingGame/NumberGuessingGame.csproj" />
-  <Project Path="PlayerPractice/019-Player.csproj" Id="dc03216e-62a1-464c-8ca5-c0b7cf5de1db" />
 </Solution>

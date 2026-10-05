@@ -1,9 +1,9 @@
-﻿namespace _019_Player
+﻿namespace CSharpLearning.ClassBasics
 {
     internal class Player
     {
         private int _hp;
-
+        public static int Count { get; private set; }
         public string Name { get; }
         public int MaxHP { get; }
         public int HP
@@ -21,7 +21,6 @@
             }
         }
         public bool IsDead => HP <= 0;
-        public static int Count { get; private set; }
 
         public Player(string name, int maxHP)
         {

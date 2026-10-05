@@ -14,9 +14,8 @@
 //打印总数 → 3
 
 
-using _019_Player;
 
-namespace _019_Player
+namespace CSharpLearning.ClassBasics
 {
     internal class Program
     {
@@ -100,7 +99,7 @@ namespace _019_Player
             }
 
             Player.PrintCount();
-            AssertTrue(Player.Count == 3, "创建失败D E后，角色数量应为3");
+            AssertTrue(Player.Count == 3, "D E创建失败后，角色数量应为3");
 
         }
     }
