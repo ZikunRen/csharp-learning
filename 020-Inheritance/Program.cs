@@ -1,4 +1,6 @@
-﻿namespace CSharpLearning.Inheritance
+﻿using static CSharpLearning.TestUtils;
+
+namespace CSharpLearning.Inheritance
 {
     internal class Program
     {
@@ -73,47 +75,12 @@
         // E04 在 Player 内部访问 Character 的 private 成员 → 结果：编译失败，CS0122："Character._hp"不可访问，因为它具有一定的保护级别
         // E05 在 Player 内部访问 Character 的 protected 成员 → 结果：编译成功
 
-        static int _passCount = 0;
-        static int _failCount = 0;
-
-        static void Check(string id, bool condition)
-        {
-            if (condition)
-            {
-                _passCount++;
-                Console.WriteLine($"{id} PASS");
-            }
-            else
-            {
-                _failCount++;
-                Console.WriteLine($"{id} FAIL  <<<<<");
-            }
-        }
-
-        static void CheckThrows<T>(string id, Action action) where T : Exception
-        {
-            try
-            {
-                action();
-                Check(id, false);   // 能执行到这一行，说明没有抛出异常 → 失败
-            }
-            catch (T)
-            {
-                Check(id, true);    // 抛出了期望类型的异常 → 通过
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"    实际抛出的是 {ex.GetType().Name}");
-                Check(id, false);   // 抛出了异常，但类型不对 → 失败
-            }
-        }
-
-        static void Main(string[] args)
+            static void Main()
         {
             RunCharacterTests();
             RunPlayerTests();
             RunEnemyTests();
-            Console.WriteLine($"\n通过 {_passCount}，失败 {_failCount}");
+            PrintSummary();
         }
 
         static void RunCharacterTests()

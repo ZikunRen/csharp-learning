@@ -1,12 +1,9 @@
-﻿
-
-namespace CSharpLearning.Inheritance
+﻿namespace CSharpLearning.Inheritance
 {
     internal class Player : Character
-
     {
         private const int DefaultMaxHp = 100;
-        public int Gold { get; private set; } = 0;
+        public int Gold { get; private set; }
         public Player(string name) : base(name, DefaultMaxHp)
         {
         }
